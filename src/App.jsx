@@ -12,7 +12,7 @@ export default function App() {
       {/* HERO SECTION */}
       <header className="hero">
         <img src="/logo.png" alt="Logo" className="logo" />
-        <p>El emeği, göz nuru tespihler</p>
+        <p>El emeği, göz nuru tesbihler</p>
       </header>
 
       {/* GALERİ - BURAYI EKLEDİK (KARTLAR BURADA DÖNÜYOR) */}
