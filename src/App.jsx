@@ -66,7 +66,7 @@ export default function App() {
             <div className="info-card">
               <div className="info-icon">📍</div>
               <h3>Atölye Adresimiz</h3>
-              <p>Alacaatlı Mahallesi 4834. Cadde 2.Etap Toki Karşısı TOKİ AVM 2.Kat No: 10<br/>No: 10 Çankaya / Ankara</p>
+              <p>Alacaatlı Mahallesi 4834. Cadde 2.Etap Toki Karşısı TOKİ AVM 2.Kat No: 10<br/>Çankaya / Ankara</p>
             </div>
 
             <div className="info-card">
