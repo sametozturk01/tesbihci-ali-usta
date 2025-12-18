@@ -6,6 +6,14 @@ import "./index.css";
 
 export default function App() {
   const [selectedTesbih, setSelectedTesbih] = useState(null);
+  // 1. Arama terimi için state ekledik
+  const [searchTerm, setSearchTerm] = useState("");
+
+  // 2. Arama filtresi: İsim veya kategoriye göre filtreleme yapar
+  const filteredTesbihler = tesbihler.filter((t) =>
+    t.ad.toLowerCase().includes(searchTerm.toLowerCase()) ||
+    (t.kategori && t.kategori.toLowerCase().includes(searchTerm.toLowerCase()))
+  );
 
   return (
     <div className="app-wrapper">
@@ -15,11 +23,43 @@ export default function App() {
         <p>El emeği, göz nuru tesbihler</p>
       </header>
 
-      {/* GALERİ - BURAYI EKLEDİK (KARTLAR BURADA DÖNÜYOR) */}
+      {/* ARAMA BÖLÜMÜ - Galerinin hemen üstü */}
+      <section className="search-section">
+        <div className="search-container">
+          <div className="search-wrapper">
+            <input 
+              type="text" 
+              placeholder="Malzeme veya model ara... (Örn: Kehribar)" 
+              className="search-input"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+            <div className="search-icon-box">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+          </div>
+          {searchTerm && (
+            <p className="search-feedback">
+              <strong>"{searchTerm}"</strong> için {filteredTesbihler.length} sonuç bulundu.
+            </p>
+          )}
+        </div>
+      </section>
+
+      {/* GALERİ - Artık filtrelenmiş listeyi (filteredTesbihler) dönüyoruz */}
       <main className="gallery">
-        {tesbihler.map((t) => (
-          <TesbihCard key={t.id} tesbih={t} onSelect={setSelectedTesbih} />
-        ))}
+        {filteredTesbihler.length > 0 ? (
+          filteredTesbihler.map((t) => (
+            <TesbihCard key={t.id} tesbih={t} onSelect={setSelectedTesbih} />
+          ))
+        ) : (
+          <div className="no-results">
+            <p>Aradığınız kriterde bir tesbih bulunamadı.</p>
+          </div>
+        )}
       </main>
 
        {/* ÜRÜN KARTLARININ ALTINDAKİ HAKKIMIZDA BÖLÜMÜ */}

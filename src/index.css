@@ -517,3 +517,73 @@ body::-webkit-scrollbar {
     height: 45px;
   }
 }
+
+/* --- MODERN ARAMA BÖLÜMÜ --- */
+.search-container {
+  max-width: 700px;
+  margin: 40px auto 50px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border: 2px solid #e3d5c5; /* Hafif bej çerçeve */
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* Arama çubuğuna tıklandığında (Focus) parlaması */
+.search-wrapper:focus-within {
+  border-color: #ff6600; /* Senin parlayan turuncun */
+  box-shadow: 0 0 20px rgba(255, 102, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.search-input {
+  width: 100%;
+  padding: 18px 25px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  color: #4e342e;
+}
+
+.search-input::placeholder {
+  color: #a0a0a0;
+  font-style: italic;
+}
+
+.search-icon-box {
+  padding-right: 25px;
+  color: #8b3d00; /* İkon rengi kehribar */
+  display: flex;
+  align-items: center;
+}
+
+.search-result-text {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #666;
+}
+
+.search-result-text strong {
+  color: #ff6600;
+}
+
+/* Mobil için Arama Çubuğu */
+@media (max-width: 768px) {
+  .search-container {
+    margin: 20px auto 30px auto;
+  }
+  .search-input {
+    padding: 15px 20px;
+    font-size: 14px;
+  }
+}
