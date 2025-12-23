@@ -55,5 +55,19 @@ export const tesbihler = [
     kesim: "Küre Kesim",
     aciklama: "1950'li yılların formülüyle dökülmüş eski hamur katalin. Kadifemsi çekimi ve zamanla değişen hare yapısıyla tam bir koleksiyon parçası.",
     resim: "/katalin.jpg"
-  }
+  },
+
+  {
+  id: 5,
+  ad: "Sıkma Kehribar",
+  tas: "Kehribar",
+  fiyat: "1.850 TL",
+  taneler: "9x12 mm",
+  imame: "Usta İşi Sistemli",
+  iscilik: "Havsa Başlı Kuru Torna",
+  usta: "Ali Usta",
+  kesim: "Küre Kesim",
+  aciklama: "Özel döküm hamurdan işlenmiş, kiraz rengine dönme garantili sıkma kehribar. Çektikçe parlayan ipeksi dokusu ve tok ses kalitesiyle günlük çekime en uygun eserlerimizdendir. Zamanla oksidasyona uğrayarak renk derinliği kazanır.",
+  resim: "/sıkmakehribar.jpg"
+ }
 ];
