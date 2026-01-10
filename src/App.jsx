@@ -145,7 +145,7 @@ export default function App() {
       {/* FOOTER */}
       <footer className="site-footer-new">
         <div className="footer-content">
-          <p>© 2025 Tesbihçi Ali Usta • El Sanatları Atölyesi • Tüm Hakları Saklıdır</p>
+          <p>© 2026 Tesbihçi Ali Usta • El Sanatları Atölyesi • Tüm Hakları Saklıdır</p>
           <p className="footer-tagline">Geleneksel Ustalık, Modern Dokunuş</p>
           <p className="credit">
           Development by <a href="https://ozturksoft.net" target="_blank" rel="noreferrer">Ozturksoft</a>
